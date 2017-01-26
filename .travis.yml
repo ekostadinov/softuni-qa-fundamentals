@@ -4,5 +4,6 @@ node_js:
   - "6.1"
 script:
   - npm install
+  - npm install eslint -g -y
   - npm run eslint features
   - npm run gherkin-lint ./features/*.feature
