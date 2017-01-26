@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - "6.1"
 before_script:
-  - sudo npm install
+  - npm install
 script:
-  - npm run lint-cucumber
-  - npm run lint-js
+  - eslint features
+  - gherkin-lint ./features/*.feature
