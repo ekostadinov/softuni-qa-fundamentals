@@ -3,7 +3,25 @@ language: node_js
 node_js:
   - "6.1"
 script:
-  - npm install
-  - npm install eslint -g -y
-  - npm run eslint features
-  - npm run gherkin-lint ./features/*.feature
+  # - npm install -g -y babel-cli
+  # - npm install -g -y babel-core
+  # - npm install -g -y babel-preset-es2015
+  # - npm install -g -y babel-preset-stage-0
+  # - npm install -g -y chai
+  # - npm install -g -y chimp
+  # - npm install -g -y cross-env
+  # - npm install -g -y cucumber-html-reporter
+  - npm install -g -y eslint
+  - npm install -g -y eslint-config-airbnb
+  - npm install -g -y eslint-config-airbnb-base
+  - npm install -g -y eslint-plugin-import
+  - npm install -g -y eslint-plugin-jsx-a11y
+  - npm install -g -y eslint-plugin-react
+  - npm install -g -y gherkin-lint
+  # - npm install -g -y jasmine-reporters
+  # - npm install -g -y jsonfile
+  # - npm install -g -y mocha
+  # - npm install -g -y node-fetch
+  # - npm install -g -y nodemailer-cli
+  # - npm install -g -y shelljs
+  # - npm install -g -y sinon
