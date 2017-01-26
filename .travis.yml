@@ -25,3 +25,5 @@ script:
   # - npm install -g -y nodemailer-cli
   # - npm install -g -y shelljs
   # - npm install -g -y sinon
+  - eslint features
+  - gherkin-lint ./features/*.feature
