@@ -1,1 +1,2 @@
-# Demos repository for the SoftUni's course 'QA Fundamentals Jan 2017'
+# Demos used in 'QA Fundamentals Jan 2017' course
+You will not find all good practices followed here, due to the nature of the course.
