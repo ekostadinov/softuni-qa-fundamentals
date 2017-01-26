@@ -1,9 +1,10 @@
+sudo: required
 language: node_js
 node_js:
   - "6"
   - "6.1"
 install:
-  - npm install
+  - sudo npm install
 script:
   - npm run lint-cucumber
   - npm run lint-js
