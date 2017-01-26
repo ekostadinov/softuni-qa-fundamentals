@@ -6,8 +6,8 @@ Feature: Softuni demo feature
 
 @watch @simple
 Scenario: Visit Softuni homepage
-  When  I visit "https://softuni.bg/"
-  Then  I see that the title contains "Softuni.bg"
+  When  I visit "https://softuni.bg/" # FIXME dear authors, what happened with the Gherkin basics!?
+  Then  I see that the title contains "Softuni.bg" # Where are the preconditions -> a.k.a Given steps!?
 
 @not-watch @trainings
 Scenario: Visit QA Fundamentals course

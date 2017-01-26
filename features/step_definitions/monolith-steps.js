@@ -1,4 +1,5 @@
-var myStepDefinitionsWrapper = function () {
+/* eslint func-names:0, prefer-arrow-callback: off */
+var myStepDefinitionsWrapper = function () { // eslint-disable-line
   this.Given(/^I visit webpage "([^"]*)"$/, function (url) {
     browser.windowHandleMaximize();
     browser.url(url);
@@ -6,13 +7,13 @@ var myStepDefinitionsWrapper = function () {
 
   // FIXME refactor to DSL
   this.When(/^I visit QA Fundamentals course page$/, function () {
-    const home_page_nav_trainings_link = '//li/a/span[text()="Обучения"]';
-    browser.waitForVisible(home_page_nav_trainings_link, 5000);
-    browser.click(home_page_nav_trainings_link);
+    const homePageNavTrainingsLink = '//li/a/span[text()="Обучения"]';
+    browser.waitForVisible(homePageNavTrainingsLink, 5000);
+    browser.click(homePageNavTrainingsLink);
 
-    const home_page_nav_qa_fundamentals_link = '//li/a[text()="QA Fundamentals - януари 2017"]';
-    browser.waitForVisible(home_page_nav_qa_fundamentals_link, 5000);
-    browser.click(home_page_nav_qa_fundamentals_link);
+    const homePageNavQaFundamentalsLink = '//li/a[text()="QA Fundamentals - януари 2017"]';
+    browser.waitForVisible(homePageNavQaFundamentalsLink, 5000);
+    browser.click(homePageNavQaFundamentalsLink);
   });
 
   this.When(/^I visit "([^"]*)"$/, function (url) {
@@ -28,10 +29,9 @@ var myStepDefinitionsWrapper = function () {
   });
 
   this.Then(/^I see the course title contains "([^"]*)"$/, function (text) {
-    const course_page_training_title = 'h2.content-title';
-    browser.waitForVisible(course_page_training_title, 5000);
-    expect(browser.getText(course_page_training_title)).toContain(text);
+    const coursePageTrainingTitle = 'h2.content-title';
+    browser.waitForVisible(coursePageTrainingTitle, 5000);
+    expect(browser.getText(coursePageTrainingTitle)).toContain(text);
   });
-
 };
 module.exports = myStepDefinitionsWrapper;

@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "watch": "chimp --watch ",
-    "lint-js": "eslint --ext .js --ext .jsx .",
+    "lint-js": "eslint features",
 	  "lint-cucumber": "gherkin-lint ./features/*.feature",
   },
   "devDependencies": {
