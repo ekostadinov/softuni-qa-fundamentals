@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "watch": "chimp --watch ",
+    "lint-js": "eslint --ext .js --ext .jsx .",
+	  "lint-cucumber": "gherkin-lint ./features/*.feature",
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "chimp": "^0.33.1",
+    "cross-env": "^1.0.7",
+    "cucumber-html-reporter": "^0.2.7",
+    "eslint": "^2.8.0",
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint-config-airbnb-base": "^1.0.1",
+    "eslint-plugin-import": "^1.5.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-react": "^4.3.0",
+    "gherkin-lint": "^1.1.3",
+    "jasmine-reporters": "^2.1.1",
+    "jsonfile": "^2.3.1",
+    "mocha": "^3.0.2",
+    "node-fetch": "^1.6.0",
+    "nodemailer-cli": "^1.0.2",
+    "shelljs": "^0.6.0",
+    "sinon": "^1.17.5"
+  }
+}
