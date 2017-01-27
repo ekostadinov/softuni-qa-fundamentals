@@ -28,7 +28,7 @@ var myStepDefinitionsWrapper = function () { // eslint-disable-line
     expect(browser.getTitle()).toContain(title);
   });
 
-  this.Then(/^I see the course title contains "([^"]*)"$/, function (text) {
+  this.Then(/^I see that the course title contains "([^"]*)"$/, function (text) {
     const coursePageTrainingTitle = 'h2.content-title';
     browser.waitForVisible(coursePageTrainingTitle, 5000);
     expect(browser.getText(coursePageTrainingTitle)).toContain(text);

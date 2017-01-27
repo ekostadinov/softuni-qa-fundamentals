@@ -4,13 +4,13 @@ Feature: Softuni demo feature
   I want to have webdriver available to me in my steps
   So that I don't have to configure my world object and I focus on testing
 
-@watch @simple
+@simple
 Scenario: Visit Softuni homepage
   When  I visit "https://softuni.bg/" # FIXME dear authors, what happened with the Gherkin basics!?
   Then  I see that the title contains "Softuni.bg" # Where are the preconditions -> a.k.a Given steps!?
 
-@not-watch @trainings
+@trainings
 Scenario: Visit QA Fundamentals course
   Given  I visit webpage "https://softuni.bg/"
   When  I visit QA Fundamentals course page
-  Then  I see the course title contains "QA Fundamentals"
+  Then  I see that the course title contains "QA Fundamentals"
