@@ -33,5 +33,12 @@ var myStepDefinitionsWrapper = function () { // eslint-disable-line
     browser.waitForVisible(coursePageTrainingTitle, 5000);
     expect(browser.getText(coursePageTrainingTitle)).toContain(text);
   });
+
+  this.Then(/^I want to see lecturer name$/, function () {
+    // const lecturerName = 'Евгени Костадинов';
+    browser.waitForVisible('//a[@class="user-name"]', 5000);
+    console.log('>>>>>' + browser.getText('//a[@class="user-name"]'));
+    expect(browser.getText('//a[@class="user-name"]')).toContain('Евгени123');
+  });
 };
 module.exports = myStepDefinitionsWrapper;
