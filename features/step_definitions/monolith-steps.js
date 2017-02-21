@@ -21,16 +21,17 @@ var myStepDefinitionsWrapper = function () { // eslint-disable-line
   });
 
   this.When(/^I change language$/, function () {
-    const eng_link = '//a[text()="English"]';
+    const engLink = '//a[text()="English"]';
 
-    browser.execute(function() {
+    browser.execute(function () {
+      // eslint-disable-next-line no-undef
       return window.scroll(0, 1000000);
-      //return window.document.getElementsByClassName('lang-switch-label')[1].click();
+      // return window.document.getElementsByClassName('lang-switch-label')[1].click();
     });
 
-    browser.waitForExist(eng_link, 5000);
-    browser.waitForVisible(eng_link, 5000);
-    browser.click(eng_link);
+    browser.waitForExist(engLink, 5000);
+    browser.waitForVisible(engLink, 5000);
+    browser.click(engLink);
   });
 
   this.Then(/^I see the title of "([^"]*)"$/, function (title) {
@@ -54,12 +55,12 @@ var myStepDefinitionsWrapper = function () { // eslint-disable-line
   });
 
   this.Then(/^I should see that resources are with new names$/, function () {
-    const resources_link = '//a[@href="/trainings/resources"]';
+    const resourcesLink = '//a[@href="/trainings/resources"]';
 
-    browser.waitForExist(resources_link, 5000);
-    browser.waitForVisible(resources_link, 5000);
+    browser.waitForExist(resourcesLink, 5000);
+    browser.waitForVisible(resourcesLink, 5000);
 
-    expect(browser.getText(resources_link)).toEqual('Resources');
+    expect(browser.getText(resourcesLink)).toEqual('Resources');
   });
 };
 module.exports = myStepDefinitionsWrapper;
