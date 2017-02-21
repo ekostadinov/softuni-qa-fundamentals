@@ -20,3 +20,10 @@ Scenario: Visit QA Fundamentals course
   Given  I visit webpage "https://softuni.bg/"
   When  I visit QA Fundamentals course page
   Then  I want to see lecturer name
+
+@lang
+Scenario: User is able to change language
+  Given  I visit webpage "https://softuni.bg/"
+  When  I visit QA Fundamentals course page
+  And I change language
+  Then I should see that resources are with new names
