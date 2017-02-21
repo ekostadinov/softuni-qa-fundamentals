@@ -16,7 +16,7 @@ Scenario: Visit QA Fundamentals course
   Then  I see that the course title contains "QA Fundamentals"
 
 @hope
-Scenario: Visit QA Fundamentals course
+Scenario: Check lecturer name
   Given  I visit webpage "https://softuni.bg/"
   When  I visit QA Fundamentals course page
   Then  I want to see lecturer name
